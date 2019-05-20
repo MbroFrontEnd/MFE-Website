@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+import Nav from './Nav';
+import NavItem from './NavItem';
+
 const StyledHeader = styled.header`
   margin: 0 auto;
   padding: 4rem 1.5rem 0 1.5rem;
@@ -19,13 +22,13 @@ const Header = ({ siteTitle }) => (
       width="220"
       height="60"
     />
-    <nav>
-      <a href="#">Speakers</a>
-      <a href="#">About</a>
-      <a href="#">Code of Conduct</a>
-      <a href="#">Spectrum</a>
-      <a href="#">Github</a>
-    </nav>
+    <Nav>
+      <NavItem href="#">Speakers</NavItem>
+      <NavItem href="#">About</NavItem>
+      <NavItem href="#">Code of Conduct</NavItem>
+      <NavItem href="#">Spectrum</NavItem>
+      <NavItem href="#">Github</NavItem>
+    </Nav>
   </StyledHeader>
 );
 
