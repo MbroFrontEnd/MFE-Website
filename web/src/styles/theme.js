@@ -1,6 +1,9 @@
 const theme = {
   backgroundColor: '#373A67',
   linkColor: '#FFFFFF',
+  brand: {
+    lightBlue: '#97DAF7'
+  },
   text: {
     color: '#FFFFFF'
   },

@@ -45,6 +45,7 @@ function LayoutContainer(props) {
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
+      color: ${props => props.theme.text.color};
       background-color ${props => props.theme.backgroundColor}
     }
   `;

@@ -6,7 +6,6 @@ import Sponsors from './Sponsors';
 const StyledFooter = styled.footer`
   padding: 1.5rem;
   font-size: 1.125rem;
-  color: ${props => props.theme.text.color};
   background-color: ${props => props.theme.footer.backgroundColor};
 `;
 

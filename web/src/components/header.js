@@ -6,7 +6,7 @@ import Nav from './Nav';
 import NavItem from './NavItem';
 
 const StyledHeader = styled.header`
-  margin: 0 auto;
+  margin: 0 auto 7rem auto;
   padding: 4rem 1.5rem 0 1.5rem;
   display: flex;
   max-width: 1250px;
