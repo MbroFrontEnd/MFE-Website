@@ -26,38 +26,66 @@ const StyledP = styled.p`
   }
 `;
 
+const StyledA = styled.a`
+  color: ${props => props.theme.linkColor};
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 function Footer() {
   return (
     <StyledFooter>
       <StyledDiv>
         <div>
           <StyledP>
-            Built with <strong>Gatsby</strong>, <strong>Sanity</strong> and
-            hosted on <strong>Netlify</strong>
+            Built with{' '}
+            <strong>
+              <StyledA href="#">Gatsby</StyledA>
+            </strong>
+            ,{' '}
+            <strong>
+              <StyledA href="#">Sanity</StyledA>
+            </strong>{' '}
+            and hosted on{' '}
+            <strong>
+              <StyledA href="#">Netlify</StyledA>
+            </strong>
           </StyledP>
           <StyledP>
-            Learn more about <strong>JAMStack</strong>
+            Learn more about{' '}
+            <strong>
+              <StyledA href="#">JAMStack</StyledA>
+            </strong>
           </StyledP>
         </div>
         <Sponsors>
-          <img
-            src={require('../../assets/images/sponsors/sanity.png')}
-            alt="Sanity"
-            width="153"
-            height="31"
-          />
-          <img
-            src={require('../../assets/images/sponsors/endeavour.png')}
-            alt="Endeavour Digital"
-            width="114"
-            height="42"
-          />
-          <img
-            src={require('../../assets/images/sponsors/26dev.svg')}
-            alt="26dev Limited"
-            width="40"
-            height="40"
-          />
+          <a href="#">
+            <img
+              src={require('../../assets/images/sponsors/sanity.png')}
+              alt="Sanity"
+              width="153"
+              height="31"
+            />
+          </a>
+          <a href="#">
+            <img
+              src={require('../../assets/images/sponsors/endeavour.png')}
+              alt="Endeavour Digital"
+              width="114"
+              height="42"
+            />
+          </a>
+          <a href="#">
+            <img
+              src={require('../../assets/images/sponsors/26dev.svg')}
+              alt="26dev Limited"
+              width="40"
+              height="40"
+            />
+          </a>
         </Sponsors>
       </StyledDiv>
     </StyledFooter>

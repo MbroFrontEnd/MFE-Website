@@ -15,8 +15,36 @@ const query = graphql`
 
 function LayoutContainer(props) {
   const GlobalStyle = createGlobalStyle`
+    @font-face {
+      font-family: 'Inter';
+      src: url(${require('../assets/fonts/Inter-Regular.woff')}) format("woff"),
+        url(${require('../assets/fonts/Inter-Regular.woff2')}) format("woff2");
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url(${require('../assets/fonts/Inter-SemiBold.woff')}) format("woff"),
+        url(${require('../assets/fonts/Inter-SemiBold.woff2')}) format("woff2");
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url(${require('../assets/fonts/Inter-Bold.woff')}) format("woff"),
+        url(${require('../assets/fonts/Inter-Bold.woff2')}) format("woff2");
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+    }
+
     body {
       margin: 0;
+      font-family: 'Inter', sans-serif;
       background-color ${props => props.theme.backgroundColor}
     }
   `;
