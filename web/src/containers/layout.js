@@ -1,44 +1,44 @@
-import {graphql, StaticQuery} from 'gatsby'
-import React, {useState} from 'react'
-import Layout from '../components/layout'
+import React from 'react';
+import { graphql, StaticQuery } from 'gatsby';
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
+
+import { theme } from '../styles/theme';
+import Layout from '../components/Layout';
 
 const query = graphql`
   query SiteTitleQuery {
-    site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
+    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
     }
   }
-`
+`;
 
-function LayoutContainer (props) {
-  const [showNav, setShowNav] = useState(false)
-  function handleShowNav () {
-    setShowNav(true)
-  }
-  function handleHideNav () {
-    setShowNav(false)
-  }
+function LayoutContainer(props) {
+  const GlobalStyle = createGlobalStyle`
+    body {
+      margin: 0;
+      background-color ${props => props.theme.backgroundColor}
+    }
+  `;
+
   return (
-    <StaticQuery
-      query={query}
-      render={data => {
-        if (!data.site) {
-          throw new Error(
-            'Missing "Site settings". Open the studio at http://localhost:3333 and add "Site settings" data'
-          )
-        }
-        return (
-          <Layout
-            {...props}
-            showNav={showNav}
-            siteTitle={data.site.title}
-            onHideNav={handleHideNav}
-            onShowNav={handleShowNav}
-          />
-        )
-      }}
-    />
-  )
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyle />
+        <StaticQuery
+          query={query}
+          render={data => {
+            if (!data.site) {
+              throw new Error(
+                'Missing "Site settings". Open the studio at http://localhost:3333 and add "Site settings" data'
+              );
+            }
+            return <Layout {...props} siteTitle={data.site.title} />;
+          }}
+        />
+      </>
+    </ThemeProvider>
+  );
 }
 
-export default LayoutContainer
+export default LayoutContainer;

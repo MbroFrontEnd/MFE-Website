@@ -1,30 +1,36 @@
-import {Link} from 'gatsby'
-import React from 'react'
-import Icon from './icon'
-import {cn} from '../lib/helpers'
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import styles from './header.module.css'
+const StyledHeader = styled.header`
+  margin: 0 auto;
+  padding: 4rem 1.5rem 0 1.5rem;
+  display: flex;
+  max-width: 1250px;
+  justify-content: space-between;
+  align-items: center;
+`;
 
-const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => (
-  <div className={styles.root}>
-    <div className={styles.wrapper}>
-      <div className={styles.branding}>
-        <Link to='/'>{siteTitle}</Link>
-      </div>
+const Header = ({ siteTitle }) => (
+  <StyledHeader>
+    <img
+      src={require('../assets/images/logo.svg')}
+      alt={siteTitle}
+      width="220"
+      height="60"
+    />
+    <nav>
+      <a href="#">Speakers</a>
+      <a href="#">About</a>
+      <a href="#">Code of Conduct</a>
+      <a href="#">Spectrum</a>
+      <a href="#">Github</a>
+    </nav>
+  </StyledHeader>
+);
 
-      <button className={styles.toggleNavButton} onClick={showNav ? onHideNav : onShowNav}>
-        <Icon symbol='hamburger' />
-      </button>
+Header.propTypes = {
+  siteTitle: PropTypes.string.isRequired
+};
 
-      <nav className={cn(styles.nav, showNav && styles.showNav)}>
-        <ul>
-          <li>
-            <Link to='/archive/'>Archive</Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-)
-
-export default Header
+export default Header;
