@@ -6,8 +6,9 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Document types
 import category from './documents/category'
+import event from './documents/event'
 import person from './documents/person'
-import project from './documents/project'
+import post from './documents/post'
 import siteSettings from './documents/siteSettings'
 
 // Object types
@@ -34,8 +35,9 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     category,
+    event,
     person,
-    project,
+    post,
     siteSettings
   ])
 })

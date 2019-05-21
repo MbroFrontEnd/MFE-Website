@@ -1,8 +1,8 @@
-import {format} from 'date-fns'
+import { format } from 'date-fns'
 
 export default {
-  name: 'project',
-  title: 'Project',
+  name: 'post',
+  title: 'Post',
   type: 'document',
   fields: [
     {
@@ -35,7 +35,7 @@ export default {
       name: 'members',
       title: 'Members',
       type: 'array',
-      of: [{type: 'projectMember'}]
+      of: [{ type: 'projectMember' }]
     },
     {
       name: 'startedAt',
@@ -56,7 +56,7 @@ export default {
       name: 'categories',
       title: 'Categories',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}]
+      of: [{ type: 'reference', to: { type: 'category' } }]
     },
     {
       name: 'body',
@@ -64,11 +64,18 @@ export default {
       type: 'projectPortableText'
     },
     {
-      name: 'relatedProjects',
-      title: 'Related projects',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'project'}}]
+      name: 'author',
+      type: 'reference',
+      description: 'Publish an author and set a reference to them here.',
+      title: 'Author',
+      to: [{ type: 'person' }]
     }
+    // {
+    //   name: 'relatedProjects',
+    //   title: 'Related projects',
+    //   type: 'array',
+    //   of: [{ type: 'reference', to: { type: 'project' } }]
+    // }
   ],
   preview: {
     select: {
@@ -77,7 +84,7 @@ export default {
       slug: 'slug',
       media: 'mainImage'
     },
-    prepare ({title = 'No title', publishedAt, slug, media}) {
+    prepare({ title = 'No title', publishedAt, slug, media }) {
       const dateSegment = format(publishedAt, 'YYYY/MM')
       const path = `/${dateSegment}/${slug.current}/`
       return {
