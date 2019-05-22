@@ -27,25 +27,42 @@ export default {
       type: 'datetime'
     },
     {
+      name: 'author',
+      type: 'reference',
+      description: 'Publish an author and set a reference to them here.',
+      title: 'Author',
+      to: [{ type: 'person' }]
+    },
+    {
+      name: 'seo',
+      title: 'SEO',
+      type: 'object',
+      fields: [
+        {
+          name: 'categories',
+          title: 'Categories',
+          type: 'array',
+          of: [{ type: 'reference', to: { type: 'category' } }]
+        },
+        {
+          name: 'keywords',
+          type: 'array',
+          title: 'Keywords',
+          description: 'Add additional keywords for SEO purposes.',
+          of: [{ type: 'string' }],
+          options: { layout: 'tags' }
+        }
+      ]
+    },
+    {
       name: 'excerpt',
       title: 'Excerpt',
       type: 'simplePortableText'
     },
     {
-      name: 'members',
-      title: 'Members',
-      type: 'array',
-      of: [{ type: 'projectMember' }]
-    },
-    {
-      name: 'startedAt',
-      title: 'Started at',
-      type: 'datetime'
-    },
-    {
-      name: 'endedAt',
-      title: 'Ended at',
-      type: 'datetime'
+      name: 'body',
+      title: 'Body',
+      type: 'advancedPortableText'
     },
     {
       name: 'mainImage',
@@ -53,29 +70,11 @@ export default {
       type: 'figure'
     },
     {
-      name: 'categories',
-      title: 'Categories',
+      name: 'relatedPosts',
+      title: 'Related Posts',
       type: 'array',
-      of: [{ type: 'reference', to: { type: 'category' } }]
-    },
-    {
-      name: 'body',
-      title: 'Body',
-      type: 'projectPortableText'
-    },
-    {
-      name: 'author',
-      type: 'reference',
-      description: 'Publish an author and set a reference to them here.',
-      title: 'Author',
-      to: [{ type: 'person' }]
+      of: [{ type: 'reference', to: { type: 'post' } }]
     }
-    // {
-    //   name: 'relatedProjects',
-    //   title: 'Related projects',
-    //   type: 'array',
-    //   of: [{ type: 'reference', to: { type: 'project' } }]
-    // }
   ],
   preview: {
     select: {

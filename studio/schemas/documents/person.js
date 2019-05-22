@@ -27,6 +27,15 @@ export default {
       type: 'figure'
     },
     {
+      name: 'personTwitter',
+      title: 'Twitter',
+      type: 'object',
+      fields: [
+        { name: 'personTwitterHandler', type: 'string', title: 'Handler' },
+        { name: 'personTwitterUrl', type: 'url', title: 'Twitter URL' }
+      ]
+    },
+    {
       name: 'bio',
       title: 'Bio',
       type: 'bioPortableText'

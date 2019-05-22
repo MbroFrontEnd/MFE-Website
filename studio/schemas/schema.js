@@ -14,8 +14,7 @@ import siteSettings from './documents/siteSettings'
 // Object types
 import bioPortableText from './objects/bioPortableText'
 import figure from './objects/figure'
-import projectMember from './objects/projectMember'
-import projectPortableText from './objects/projectPortableText'
+import advancedPortableText from './objects/advancedPortableText'
 import simplePortableText from './objects/simplePortableText'
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -29,8 +28,7 @@ export default createSchema({
     // { type: 'typename' } in other document schemas
     bioPortableText,
     figure,
-    projectMember,
-    projectPortableText,
+    advancedPortableText,
     simplePortableText,
     // The following are document types which will appear
     // in the studio.
