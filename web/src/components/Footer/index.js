@@ -28,9 +28,10 @@ const StyledP = styled.p`
 const StyledA = styled.a`
   color: ${props => props.theme.linkColor};
   text-decoration: none;
+  transition: opacity 0.25s linear;
 
   &:hover {
-    text-decoration: underline;
+    opacity: 0.75;
   }
 `;
 

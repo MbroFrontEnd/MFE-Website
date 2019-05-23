@@ -6,7 +6,7 @@ const Sponsors = styled.div`
 
   > a {
     margin-right: 2rem;
-    transition: all 0.25s linear;
+    transition: opacity 0.25s linear;
 
     &:hover {
       opacity: 0.75;
