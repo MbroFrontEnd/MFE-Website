@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Header from './Header';
 import Footer from './Footer';
 
-const Layout = ({ children, siteTitle }) => (
+const SiteLayout = ({ children, siteTitle }) => (
   <>
     <Header siteTitle={siteTitle} />
     <div>{children}</div>
@@ -12,9 +12,9 @@ const Layout = ({ children, siteTitle }) => (
   </>
 );
 
-Layout.propTypes = {
+SiteLayout.propTypes = {
   children: PropTypes.node.isRequired,
   siteTitle: PropTypes.string.isRequired
 };
 
-export default Layout;
+export default SiteLayout;

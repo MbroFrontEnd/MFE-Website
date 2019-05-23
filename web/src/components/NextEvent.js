@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledDiv = styled.div`
+const StyledSection = styled.section`
   margin-bottom: 4rem;
 `;
 
@@ -31,7 +31,7 @@ const LocationIcon = styled.img`
 
 function NextEvent() {
   return (
-    <StyledDiv>
+    <StyledSection>
       <StyledTime>27th June</StyledTime>
       <StyledH2>A Night of JAMStack</StyledH2>
       <StyledAddress>
@@ -52,7 +52,7 @@ function NextEvent() {
       </p>
 
       <div>
-        <h3>My Amazing Talk</h3>
+        <h4>My Amazing Talk</h4>
         <p>By Speaker Number One</p>
         <p>
           We are joined by some good friends from another part of the country
@@ -63,7 +63,7 @@ function NextEvent() {
       </div>
 
       <div>
-        <h3>My Amazing Talk</h3>
+        <h4>My Amazing Talk</h4>
         <p>By Speaker Number One</p>
         <p>
           We are joined by some good friends from another part of the country
@@ -72,7 +72,7 @@ function NextEvent() {
           doesn’t shut up about it and it does everybody’s head in.
         </p>
       </div>
-    </StyledDiv>
+    </StyledSection>
   );
 }
 

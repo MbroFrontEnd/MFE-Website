@@ -3,7 +3,7 @@ import { graphql, StaticQuery } from 'gatsby';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 import { theme } from '../styles/theme';
-import Layout from '../components/Layout';
+import SiteLayout from '../components/SiteLayout';
 
 const query = graphql`
   query SiteTitleQuery {
@@ -62,7 +62,7 @@ function LayoutContainer(props) {
                 'Missing "Site settings". Open the studio at http://localhost:3333 and add "Site settings" data'
               );
             }
-            return <Layout {...props} siteTitle={data.site.title} />;
+            return <SiteLayout {...props} siteTitle={data.site.title} />;
           }}
         />
       </>
