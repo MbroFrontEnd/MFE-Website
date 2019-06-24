@@ -5,9 +5,10 @@ const NavItem = styled.a`
   font-size: 1.125rem;
   color: ${props => props.theme.linkColor};
   text-decoration: none;
+  transition: opacity 0.25s linear;
 
   &:hover {
-    text-decoration: underline;
+    opacity: 0.75;
   }
 
   &:last-child {

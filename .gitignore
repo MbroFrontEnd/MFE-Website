@@ -11,5 +11,4 @@
 /package-lock.json
 /yarn.lock
 
-# Config
 .env

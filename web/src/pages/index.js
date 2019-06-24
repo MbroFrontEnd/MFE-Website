@@ -6,6 +6,9 @@ import GraphQLErrorList from '../components/graphql-error-list';
 import SEO from '../components/seo';
 import Layout from '../containers/layout';
 import NextEvent from '../components/NextEvent';
+import PreviousEvents from '../components/PreviousEvents';
+import Venue from '../components/Venue';
+import CallForSpeakers from '../components/CallForSpeakers';
 
 const StyledMain = styled.main`
   margin: 0 auto 5rem auto;
@@ -50,6 +53,9 @@ const IndexPage = props => {
       />
       <StyledMain>
         <NextEvent />
+        <PreviousEvents />
+        <Venue />
+        <CallForSpeakers />
       </StyledMain>
     </Layout>
   );
