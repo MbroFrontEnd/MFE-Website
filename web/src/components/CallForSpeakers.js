@@ -2,6 +2,7 @@ import React from 'react';
 
 import { HeadingBravo } from '../components/Headings';
 import { ButtonAlpha } from '../components/Buttons';
+import { Input, Textarea } from '../components/Input';
 
 const CallForSpeakers = () => (
   <section>
@@ -13,13 +14,15 @@ const CallForSpeakers = () => (
       experienced then please complete the form below and we’ll get back to you.
     </p>
     <form>
-      <input type="text" name="name" placeholder="Your Name" />
-      <input type="email" name="email" placeholder="Email Address" />
-      <input type="twitter" name="twitter" placeholder="Twitter Handler" />
-      <textarea name="description" rows="5" />
-      <ButtonAlpha type="submit" placeholder="Tell us about your talk...">
-        Submit
-      </ButtonAlpha>
+      <Input type="text" name="name" placeholder="Your Name" />
+      <Input type="email" name="email" placeholder="Email Address" />
+      <Input type="twitter" name="twitter" placeholder="Twitter Handler" />
+      <Textarea
+        name="description"
+        rows="5"
+        placeholder="Tell us about your talk..."
+      />
+      <ButtonAlpha type="submit">Submit</ButtonAlpha>
     </form>
   </section>
 );
