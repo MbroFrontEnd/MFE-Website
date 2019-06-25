@@ -3,10 +3,8 @@ import styled from 'styled-components';
 
 import { HeadingAlpha } from '../components/Headings';
 import { Event } from '../components/Event';
-
-const StyledSection = styled.section`
-  margin-bottom: 4rem;
-`;
+import { Text } from '../components/Text';
+import { Section } from '../components/Section';
 
 const StyledTime = styled.time`
   font-size: 3rem;
@@ -15,6 +13,8 @@ const StyledTime = styled.time`
 
 const StyledAddress = styled.address`
   display: flex;
+  margin-top: 16px;
+  margin-bottom: 64px;
   font-size: 1.5rem;
   color: ${props => props.theme.text.color};
   font-style: normal;
@@ -27,7 +27,7 @@ const LocationIcon = styled.img`
 
 function NextEvent() {
   return (
-    <StyledSection>
+    <Section>
       <StyledTime>27th June</StyledTime>
       <HeadingAlpha>A Night of JAMStack</HeadingAlpha>
       <StyledAddress>
@@ -40,31 +40,31 @@ function NextEvent() {
         Hit The Bar, Middlesbrough
       </StyledAddress>
 
-      <p>
+      <Text>
         We are joined by some good friends from another part of the country who
         have taken the time to come along and speak to us about this amazing
         static site architecture. Jamie absolutely loves it and he doesn’t shut
         up about it and it does everybody’s head in.
-      </p>
+      </Text>
 
       <Event title="My Amazing Talk" speaker="By Speaker Number One">
-        <p>
+        <Text>
           We are joined by some good friends from another part of the country
           who have taken the time to come along and speak to us about this
           amazing static site architecture. Jamie absolutely loves it and he
           doesn’t shut up about it and it does everybody’s head in.
-        </p>
+        </Text>
       </Event>
 
       <Event title="My Amazing Talk" speaker="By Speaker Number One">
-        <p>
+        <Text>
           We are joined by some good friends from another part of the country
           who have taken the time to come along and speak to us about this
           amazing static site architecture. Jamie absolutely loves it and he
           doesn’t shut up about it and it does everybody’s head in.
-        </p>
+        </Text>
       </Event>
-    </StyledSection>
+    </Section>
   );
 }
 

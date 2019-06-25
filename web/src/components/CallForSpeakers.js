@@ -3,16 +3,18 @@ import React from 'react';
 import { HeadingBravo } from '../components/Headings';
 import { ButtonAlpha } from '../components/Buttons';
 import { Input, Textarea } from '../components/Input';
+import { Text } from '../components/Text';
+import { Section } from '../components/Section';
 
 const CallForSpeakers = () => (
-  <section>
+  <Section>
     <HeadingBravo>Call For Speakers</HeadingBravo>
-    <p>
+    <Text>
       We’re always on the look out for speakers, especially those from the
       Middlesbrough area. If you would like to come along to our friendly meetup
       and talk about something you have learned or something you have
       experienced then please complete the form below and we’ll get back to you.
-    </p>
+    </Text>
     <form>
       <Input type="text" name="name" placeholder="Your Name" />
       <Input type="email" name="email" placeholder="Email Address" />
@@ -24,7 +26,7 @@ const CallForSpeakers = () => (
       />
       <ButtonAlpha type="submit">Submit</ButtonAlpha>
     </form>
-  </section>
+  </Section>
 );
 
 export default CallForSpeakers;
