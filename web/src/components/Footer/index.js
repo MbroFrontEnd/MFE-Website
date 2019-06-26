@@ -35,7 +35,7 @@ const StyledA = styled.a`
   }
 `;
 
-function Footer() {
+const Footer = () => {
   return (
     <StyledFooter>
       <StyledDiv>
@@ -90,6 +90,6 @@ function Footer() {
       </StyledDiv>
     </StyledFooter>
   );
-}
+};
 
 export default Footer;

@@ -1,8 +1,8 @@
-import {format} from 'date-fns'
+import { format } from 'date-fns'
 
 export default {
-  name: 'project',
-  title: 'Project',
+  name: 'post',
+  title: 'Post',
   type: 'document',
   fields: [
     {
@@ -27,25 +27,26 @@ export default {
       type: 'datetime'
     },
     {
+      name: 'author',
+      type: 'reference',
+      description: 'Publish an author and set a reference to them here.',
+      title: 'Author',
+      to: [{ type: 'person' }]
+    },
+    {
+      name: 'seo',
+      title: 'SEO',
+      type: 'seo'
+    },
+    {
       name: 'excerpt',
       title: 'Excerpt',
       type: 'simplePortableText'
     },
     {
-      name: 'members',
-      title: 'Members',
-      type: 'array',
-      of: [{type: 'projectMember'}]
-    },
-    {
-      name: 'startedAt',
-      title: 'Started at',
-      type: 'datetime'
-    },
-    {
-      name: 'endedAt',
-      title: 'Ended at',
-      type: 'datetime'
+      name: 'body',
+      title: 'Body',
+      type: 'advancedPortableText'
     },
     {
       name: 'mainImage',
@@ -53,21 +54,10 @@ export default {
       type: 'figure'
     },
     {
-      name: 'categories',
-      title: 'Categories',
+      name: 'relatedPosts',
+      title: 'Related Posts',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}]
-    },
-    {
-      name: 'body',
-      title: 'Body',
-      type: 'projectPortableText'
-    },
-    {
-      name: 'relatedProjects',
-      title: 'Related projects',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'project'}}]
+      of: [{ type: 'reference', to: { type: 'post' } }]
     }
   ],
   preview: {
@@ -77,7 +67,7 @@ export default {
       slug: 'slug',
       media: 'mainImage'
     },
-    prepare ({title = 'No title', publishedAt, slug, media}) {
+    prepare({ title = 'No title', publishedAt, slug, media }) {
       const dateSegment = format(publishedAt, 'YYYY/MM')
       const path = `/${dateSegment}/${slug.current}/`
       return {
