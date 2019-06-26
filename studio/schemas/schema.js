@@ -14,6 +14,8 @@ import siteSettings from './documents/siteSettings'
 // Object types
 import bioPortableText from './objects/bioPortableText'
 import figure from './objects/figure'
+import seo from './objects/seo'
+import twitter from './objects/twitter'
 import advancedPortableText from './objects/advancedPortableText'
 import simplePortableText from './objects/simplePortableText'
 
@@ -28,6 +30,8 @@ export default createSchema({
     // { type: 'typename' } in other document schemas
     bioPortableText,
     figure,
+    seo,
+    twitter,
     advancedPortableText,
     simplePortableText,
     // The following are document types which will appear

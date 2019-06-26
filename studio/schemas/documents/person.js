@@ -29,11 +29,7 @@ export default {
     {
       name: 'personTwitter',
       title: 'Twitter',
-      type: 'object',
-      fields: [
-        { name: 'personTwitterHandler', type: 'string', title: 'Handler' },
-        { name: 'personTwitterUrl', type: 'url', title: 'Twitter URL' }
-      ]
+      type: 'twitter'
     },
     {
       name: 'bio',
