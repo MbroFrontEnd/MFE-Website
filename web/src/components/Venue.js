@@ -1,12 +1,16 @@
 import React from 'react';
 
+import { HeadingBravo } from '../components/Headings';
+import { Text } from '../components/Text';
+import { Section } from '../components/Section';
+
 const Venue = () => (
-  <section>
-    <h3>Venue</h3>
-    <p>Hit The Bar, Middlesbrough</p>
+  <Section>
+    <HeadingBravo>Venue</HeadingBravo>
+    <Text>Hit The Bar, Middlesbrough</Text>
     <img src="http://placehold.it/750" width="375" />
     <address>Hit The Bar, Bridge Street East, Middlesbrough</address>
-  </section>
+  </Section>
 );
 
 export default Venue;
