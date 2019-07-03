@@ -18,6 +18,7 @@ import seo from './objects/seo'
 import twitter from './objects/twitter'
 import advancedPortableText from './objects/advancedPortableText'
 import simplePortableText from './objects/simplePortableText'
+import talk from './objects/talk'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -34,6 +35,7 @@ export default createSchema({
     twitter,
     advancedPortableText,
     simplePortableText,
+    talk,
     // The following are document types which will appear
     // in the studio.
     category,

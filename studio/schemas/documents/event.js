@@ -22,6 +22,12 @@ export default {
       }
     },
     {
+      name: 'eventDate',
+      title: 'Event Date',
+      description: 'The date of the event',
+      type: 'datetime'
+    },
+    {
       name: 'seo',
       title: 'SEO',
       type: 'seo'
@@ -29,19 +35,19 @@ export default {
     {
       name: 'introduction',
       title: 'Introduction',
-      description: 'This is the introduction that will be presented on the homepage',
+      description: 'This is the synopsis that will be presented on the homepage',
       type: 'simplePortableText'
-    },
-    {
-      name: 'body',
-      title: 'Body',
-      description: 'The main body. This is displayed on the single event template',
-      type: 'advancedPortableText'
     },
     {
       name: 'image',
       title: 'Image',
       type: 'figure'
+    },
+    {
+      title: 'Talks',
+      name: 'talks',
+      type: 'array',
+      of: [{ type: 'talk' }]
     }
   ],
   preview: {

@@ -23,11 +23,11 @@ const StyledH5 = styled.h5`
   color: rgba(255, 255, 255, 0.8);
 `;
 
-const Event = ({ title = '', speaker = '', children }) => {
+const Event = ({ title = '', speaker = null, children }) => {
   return (
     <StyledArticle>
       <StyledH4>{title}</StyledH4>
-      <StyledH5>{speaker}</StyledH5>
+      {speaker && <StyledH5>{speaker}</StyledH5>}
       {children}
     </StyledArticle>
   );
