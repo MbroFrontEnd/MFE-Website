@@ -35,7 +35,7 @@ const Event = ({ title = '', speaker = null, children }) => {
 
 Event.propTypes = {
   title: PropTypes.string.isRequired,
-  speaker: PropTypes.string.isRequired,
+  speaker: PropTypes.string,
   children: PropTypes.node.isRequired
 };
 

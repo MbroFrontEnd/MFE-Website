@@ -28,6 +28,16 @@ export default {
       type: 'datetime'
     },
     {
+      title: 'Is this the featured event?',
+      name: 'featuredEvent',
+      type: 'boolean'
+    },
+    {
+      title: 'Is event on sale?',
+      name: 'onSale',
+      type: 'boolean'
+    },
+    {
       name: 'seo',
       title: 'SEO',
       type: 'seo'

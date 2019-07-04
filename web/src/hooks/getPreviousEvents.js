@@ -4,9 +4,10 @@ export const getPreviousEvents = () => {
   const { allSanityEvent } = useStaticQuery(
     graphql`
       query PreviousEvents {
-        allSanityEvent(filter: { eventDate: { lt: "2019-08-28" } }) {
+        allSanityEvent(filter: { featuredEvent: { eq: false } }) {
           edges {
             node {
+              id
               name
               eventDate
               _rawIntroduction

@@ -1,0 +1,6 @@
+:root {
+  --brand-primary: #373A67;
+  --brand-secondary: #2974a4;
+
+ --component-box-shadow: 0 1px 3px color(var(--black) a(50%));
+}

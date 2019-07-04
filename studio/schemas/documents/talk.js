@@ -7,7 +7,7 @@
 export default {
   name: 'talk',
   title: 'Talk',
-  type: 'object',
+  type: 'document',
   fields: [
     {
       name: 'title',

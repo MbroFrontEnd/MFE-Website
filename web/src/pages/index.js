@@ -12,7 +12,7 @@ import CallForSpeakers from '../components/CallForSpeakers';
 
 const StyledMain = styled.main`
   margin: 0 auto 5rem auto;
-  max-width: 840px;
+  max-width: 980px;
 `;
 
 export const query = graphql`

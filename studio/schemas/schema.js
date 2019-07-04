@@ -10,6 +10,7 @@ import event from './documents/event'
 import person from './documents/person'
 import post from './documents/post'
 import siteSettings from './documents/siteSettings'
+import talk from './documents/talk'
 
 // Object types
 import bioPortableText from './objects/bioPortableText'
@@ -18,7 +19,6 @@ import seo from './objects/seo'
 import twitter from './objects/twitter'
 import advancedPortableText from './objects/advancedPortableText'
 import simplePortableText from './objects/simplePortableText'
-import talk from './objects/talk'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
