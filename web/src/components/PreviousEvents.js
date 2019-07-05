@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import { HeadingBravo } from '../components/Headings';
 import { Event } from '../components/Event';
@@ -6,9 +7,27 @@ import { ButtonAlpha } from '../components/Buttons';
 import { Text } from '../components/Text';
 import { Section } from '../components/Section';
 
+const StyledHeader = styled.header`
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+`;
+
+const StyledSvg = styled.img`
+  margin-right: 1.5rem;
+`;
+
 const PreviousEvents = () => (
   <Section>
-    <HeadingBravo>Previous Events</HeadingBravo>
+    <StyledHeader>
+      <StyledSvg
+        src={require('../assets/icons/cal.svg')}
+        alt="Previous Events"
+        width="32"
+        height="32"
+      />
+      <HeadingBravo marginBottom="0">Previous Events</HeadingBravo>
+    </StyledHeader>
 
     <Event title="My Amazing Talk" speaker="By Speaker Number One">
       <Text>
