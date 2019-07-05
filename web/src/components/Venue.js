@@ -8,6 +8,13 @@ import { Section } from '../components/Section';
 const StyledDiv = styled.div`
   display: flex;
   justify-content: space-between;
+  align-content: middle;
+`;
+
+const StyledHeader = styled.header`
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
 `;
 
 const StyledAside = styled.aside`
@@ -22,8 +29,8 @@ const StyledAddress = styled.address`
 `;
 
 const StyledH4 = styled.h4`
-  margin: 0 0 16px 0;
-  font-size: 24px;
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
   color: #FFFFFF:
 `;
 
@@ -31,9 +38,21 @@ const StyledImg = styled.img`
   max-width: 375px;
 `;
 
+const StyledSvg = styled.img`
+  margin-right: 1.5rem;
+`;
+
 const Venue = () => (
   <Section>
-    <HeadingBravo>Venue</HeadingBravo>
+    <StyledHeader>
+      <StyledSvg
+        src={require('../assets/icons/location.svg')}
+        alt="Location"
+        width="32"
+        height="32"
+      />
+      <HeadingBravo marginBottom="0">Venue</HeadingBravo>
+    </StyledHeader>
     <StyledDiv>
       <StyledAside>
         <StyledH4>Hit The Bar, Middlesbrough</StyledH4>
