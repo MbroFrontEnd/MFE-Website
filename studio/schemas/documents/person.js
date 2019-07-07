@@ -27,6 +27,11 @@ export default {
       type: 'figure'
     },
     {
+      name: 'personTwitter',
+      title: 'Twitter',
+      type: 'twitter'
+    },
+    {
       name: 'bio',
       title: 'Bio',
       type: 'bioPortableText'

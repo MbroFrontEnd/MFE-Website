@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "MFE-Website",
+  "name": "mfe-website",
   "version": "0.0.0",
   "scripts": {
     "build": "lerna run build --parallel",
