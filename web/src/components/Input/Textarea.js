@@ -9,6 +9,15 @@ const Textarea = styled.textarea`
   background: transparent;
   border: none;
   border-bottom: 1px solid #979797;
+  transition: linear 0.25s border;
+
+  &:focus {
+    border-bottom: 1px solid #ffffff;
+  }
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
 `;
 
 export default Textarea;
