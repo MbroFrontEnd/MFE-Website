@@ -6,16 +6,16 @@ const ButtonAlpha = styled.button`
   width: 137px;
   font-size: 1rem;
   font-weight: 500;
-  color: #ffffff;
+  color: #4297cd;
   text-align: center;
-  background-color: #4297cd;
+  background-color: #ffffff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: ease 0.25s background;
+  transition: ease 0.25s color;
 
   &:hover {
-    background-color: ${darken(0.1, '#4297cd')};
+    color: ${darken(0.15, '#4297cd')};
   }
 `;
 
