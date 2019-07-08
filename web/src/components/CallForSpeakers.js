@@ -17,6 +17,11 @@ const StyledSvg = styled.img`
   margin-right: 1.5rem;
 `;
 
+const StyledLabel = styled.label`
+  display: block;
+  margin-bottom: 0.5rem;
+`;
+
 const CallForSpeakers = () => (
   <Section>
     <StyledHeader>
@@ -36,14 +41,16 @@ const CallForSpeakers = () => (
       experienced then please complete the form below and we’ll get back to you.
     </Text>
     <form>
-      <Input type="text" name="name" placeholder="Your Name" />
-      <Input type="email" name="email" placeholder="Email Address" />
-      <Input type="twitter" name="twitter" placeholder="Twitter Handler" />
-      <Textarea
-        name="description"
-        rows="5"
-        placeholder="Tell us about your talk..."
-      />
+      <StyledLabel htmlFor="name">Your Name</StyledLabel>
+      <Input id="name" type="text" name="name" />
+      <StyledLabel htmlFor="email">Email Address</StyledLabel>
+      <Input id="email" type="email" name="email" />
+      <StyledLabel htmlFor="twitter">Twitter Handler</StyledLabel>
+      <Input id="twitter" type="twitter" name="twitter" />
+      <StyledLabel htmlFor="description">
+        Tell us about your talk...
+      </StyledLabel>
+      <Textarea id="description" name="description" rows="5" />
       <ButtonAlpha type="submit">Submit</ButtonAlpha>
     </form>
   </Section>
