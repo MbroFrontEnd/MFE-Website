@@ -9,6 +9,10 @@ const StyledDiv = styled.div`
   display: flex;
   justify-content: space-between;
   align-content: middle;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const StyledHeader = styled.header`

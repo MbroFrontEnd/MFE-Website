@@ -9,9 +9,19 @@ const StyledHeader = styled.header`
   margin: 0 auto 7rem auto;
   padding: 4rem 1.5rem 0 1.5rem;
   display: flex;
-  max-width: 1250px;
+  max-width: 980px;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+    padding-top: 2rem;
+
+    img {
+      margin-bottom: 1.75rem;
+    }
+  }
 `;
 
 const Header = ({ siteTitle }) => (

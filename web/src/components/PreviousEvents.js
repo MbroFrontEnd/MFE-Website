@@ -1,11 +1,18 @@
 import React from 'react';
+import BlockContent from '@sanity/block-content-to-react';
+
+/**
+ * Hooks for acquiring GraphQL Data
+ */
+import { getPreviousEvents } from '../hooks/getPreviousEvents';
 import styled from 'styled-components';
 
 import { HeadingBravo } from '../components/Headings';
 import { Event } from '../components/Event';
 import { ButtonAlpha } from '../components/Buttons';
-import { Text } from '../components/Text';
 import { Section } from '../components/Section';
+
+import serializers from '../serializers';
 
 const StyledHeader = styled.header`
   margin-bottom: 2rem;
@@ -17,38 +24,34 @@ const StyledSvg = styled.img`
   margin-right: 1.5rem;
 `;
 
-const PreviousEvents = () => (
-  <Section>
-    <StyledHeader>
-      <StyledSvg
-        src={require('../assets/icons/cal.svg')}
-        alt="Previous Events"
-        width="32"
-        height="32"
-      />
-      <HeadingBravo marginBottom="0">Previous Events</HeadingBravo>
-    </StyledHeader>
+const PreviousEvents = () => {
+  const events = getPreviousEvents();
 
-    <Event title="My Amazing Talk" speaker="By Speaker Number One">
-      <Text>
-        We are joined by some good friends from another part of the country who
-        have taken the time to come along and speak to us about this amazing
-        static site architecture. Jamie absolutely loves it and he doesn’t shut
-        up about it and it does everybody’s head in.
-      </Text>
-      <ButtonAlpha>View</ButtonAlpha>
-    </Event>
-
-    <Event title="My Amazing Talk" speaker="By Speaker Number One">
-      <Text>
-        We are joined by some good friends from another part of the country who
-        have taken the time to come along and speak to us about this amazing
-        static site architecture. Jamie absolutely loves it and he doesn’t shut
-        up about it and it does everybody’s head in.
-      </Text>
-      <ButtonAlpha>View</ButtonAlpha>
-    </Event>
-  </Section>
-);
+  return (
+    <Section>
+      <StyledHeader>
+        <StyledSvg
+          src={require('../assets/icons/cal.svg')}
+          alt="Previous Events"
+          width="32"
+          height="32"
+        />
+        <HeadingBravo marginBottom="0">Previous Events</HeadingBravo>
+      </StyledHeader>
+      {events.map(event => (
+        <Event title={event.node.name} key={event.node.id}>
+          {event.node._rawIntroduction && (
+            <BlockContent
+              blocks={event.node._rawIntroduction}
+              serializers={serializers}
+            />
+          )}
+          {/* Will bring this back later when we have integrated the page */}
+          {/* <ButtonAlpha>View</ButtonAlpha> */}
+        </Event>
+      ))}
+    </Section>
+  );
+};
 
 export default PreviousEvents;

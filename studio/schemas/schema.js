@@ -10,6 +10,7 @@ import event from './documents/event'
 import person from './documents/person'
 import post from './documents/post'
 import siteSettings from './documents/siteSettings'
+import talk from './documents/talk'
 
 // Object types
 import bioPortableText from './objects/bioPortableText'
@@ -34,6 +35,7 @@ export default createSchema({
     twitter,
     advancedPortableText,
     simplePortableText,
+    talk,
     // The following are document types which will appear
     // in the studio.
     category,
