@@ -43,26 +43,26 @@ const Footer = () => {
           <StyledP>
             Built with{' '}
             <strong>
-              <StyledA href="#">Gatsby</StyledA>
+              <StyledA href="https://www.gatsbyjs.org/">Gatsby</StyledA>
             </strong>
             ,{' '}
             <strong>
-              <StyledA href="#">Sanity</StyledA>
+              <StyledA href="https://www.sanity.io/">Sanity</StyledA>
             </strong>{' '}
             and hosted on{' '}
             <strong>
-              <StyledA href="#">Netlify</StyledA>
+              <StyledA href="https://www.netlify.com/">Netlify</StyledA>
             </strong>
           </StyledP>
           <StyledP>
             Learn more about{' '}
             <strong>
-              <StyledA href="#">JAMStack</StyledA>
+              <StyledA href="https://jamstack.org/">JAMStack</StyledA>
             </strong>
           </StyledP>
         </div>
         <Sponsors>
-          <a href="#">
+          <a href="https://www.sanity.io/">
             <img
               src={require('../../assets/images/sponsors/sanity.png')}
               alt="Sanity"
@@ -70,7 +70,7 @@ const Footer = () => {
               height="31"
             />
           </a>
-          <a href="#">
+          <a href="https://endeavour-digital.com/">
             <img
               src={require('../../assets/images/sponsors/endeavour.png')}
               alt="Endeavour Digital"
@@ -78,14 +78,12 @@ const Footer = () => {
               height="42"
             />
           </a>
-          <a href="#">
-            <img
-              src={require('../../assets/images/sponsors/26dev.svg')}
-              alt="26dev Limited"
-              width="40"
-              height="40"
-            />
-          </a>
+          <img
+            src={require('../../assets/images/sponsors/26dev.svg')}
+            alt="26dev Limited"
+            width="40"
+            height="40"
+          />
         </Sponsors>
       </StyledDiv>
     </StyledFooter>
