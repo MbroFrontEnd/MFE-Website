@@ -26,7 +26,6 @@ const StyledSvg = styled.img`
 
 const PreviousEvents = () => {
   const events = getPreviousEvents();
-  console.log('events', events);
 
   return (
     <Section>
@@ -47,7 +46,8 @@ const PreviousEvents = () => {
               serializers={serializers}
             />
           )}
-          <ButtonAlpha>View</ButtonAlpha>
+          {/* Will bring this back later when we have integrated the page */}
+          {/* <ButtonAlpha>View</ButtonAlpha> */}
         </Event>
       ))}
     </Section>

@@ -40,7 +40,7 @@ const LocationIcon = styled.img`
 
 const NextEvent = () => {
   const event = getFeaturedEvent();
-  console.log('event', event);
+
   return (
     <Section>
       <StyledTime>{event.eventDate}</StyledTime>
