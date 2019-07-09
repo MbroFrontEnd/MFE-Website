@@ -13,16 +13,25 @@ import serializers from '../serializers';
 const StyledTime = styled.time`
   font-size: 3rem;
   color: ${props => props.theme.text.color};
+
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 
 const StyledAddress = styled.address`
   display: flex;
-  margin-top: 16px;
-  margin-bottom: 64px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
   font-size: 1.5rem;
   color: ${props => props.theme.text.color};
   font-style: normal;
   align-content: center;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+  }
 `;
 
 const LocationIcon = styled.img`

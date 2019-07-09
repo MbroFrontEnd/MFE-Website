@@ -12,6 +12,16 @@ const StyledHeader = styled.header`
   max-width: 980px;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+    padding-top: 2rem;
+
+    img {
+      margin-bottom: 1.75rem;
+    }
+  }
 `;
 
 const Header = ({ siteTitle }) => (
