@@ -64,12 +64,6 @@ const Venue = () => (
     <StyledDiv>
       <StyledAside>
         <StyledH4>Hit The Bar, Middlesbrough</StyledH4>
-        <Text>
-          We are joined by some good friends from another part of the country
-          who have taken the time to come along and speak to us about this
-          amazing static site architecture. Jamie absolutely loves it and he
-          doesn’t shut up about it and it does everybody’s head in.
-        </Text>
         <StyledAddress>
           Hit The Bar, Bridge Street East, Middlesbrough
         </StyledAddress>
