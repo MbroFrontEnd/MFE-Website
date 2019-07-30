@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { darken } from 'polished';
+import { lighten } from 'polished';
 
 const ButtonAlpha = styled.button`
   padding: 12px 8px;
   width: 137px;
   font-size: 1rem;
   font-weight: 500;
-  color: #4297cd;
+  color: #454875;
   text-align: center;
   background-color: #ffffff;
   border: none;
@@ -15,7 +15,7 @@ const ButtonAlpha = styled.button`
   transition: ease 0.25s color;
 
   &:hover {
-    color: ${darken(0.15, '#4297cd')};
+    color: ${lighten(0.15, '#454875')};
   }
 `;
 

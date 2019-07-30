@@ -15,6 +15,10 @@ const StyledDiv = styled.div`
   max-width: 1250px;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const StyledP = styled.p`
@@ -22,6 +26,10 @@ const StyledP = styled.p`
 
   &:last-child {
     margin: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
   }
 `;
 

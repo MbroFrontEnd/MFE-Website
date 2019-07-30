@@ -9,9 +9,19 @@ const StyledHeader = styled.header`
   margin: 0 auto 7rem auto;
   padding: 4rem 1.5rem 0 1.5rem;
   display: flex;
-  max-width: 1250px;
+  max-width: 980px;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+    padding-top: 2rem;
+
+    img {
+      margin-bottom: 1.75rem;
+    }
+  }
 `;
 
 const Header = ({ siteTitle }) => (
@@ -23,11 +33,21 @@ const Header = ({ siteTitle }) => (
       height="60"
     />
     <Nav>
-      {/* <NavItem href="#">Speakers</NavItem>
-      <NavItem href="#">About</NavItem> */}
       <NavItem href="#">Code of Conduct</NavItem>
-      <NavItem href="https://spectrum.chat/middlesbrough-fe">Spectrum</NavItem>
-      <NavItem href="https://github.com/MbroFrontEnd">Github</NavItem>
+      <NavItem
+        href="https://spectrum.chat/middlesbrough-fe"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Spectrum
+      </NavItem>
+      <NavItem
+        href="https://github.com/MbroFrontEnd"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Github
+      </NavItem>
     </Nav>
   </StyledHeader>
 );

@@ -9,6 +9,10 @@ const StyledDiv = styled.div`
   display: flex;
   justify-content: space-between;
   align-content: middle;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const StyledHeader = styled.header`
@@ -26,6 +30,10 @@ const StyledAddress = styled.address`
   font-style: normal;
   font-weight: 600;
   color: #97daf7;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 16px;
+  }
 `;
 
 const StyledH4 = styled.h4`
