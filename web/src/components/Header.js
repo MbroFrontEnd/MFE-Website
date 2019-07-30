@@ -33,11 +33,21 @@ const Header = ({ siteTitle }) => (
       height="60"
     />
     <Nav>
-      {/* <NavItem href="#">Speakers</NavItem>
-      <NavItem href="#">About</NavItem> */}
       <NavItem href="#">Code of Conduct</NavItem>
-      <NavItem href="https://spectrum.chat/middlesbrough-fe">Spectrum</NavItem>
-      <NavItem href="https://github.com/MbroFrontEnd">Github</NavItem>
+      <NavItem
+        href="https://spectrum.chat/middlesbrough-fe"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Spectrum
+      </NavItem>
+      <NavItem
+        href="https://github.com/MbroFrontEnd"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Github
+      </NavItem>
     </Nav>
   </StyledHeader>
 );
