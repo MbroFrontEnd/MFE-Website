@@ -30,6 +30,10 @@ const StyledAddress = styled.address`
   font-style: normal;
   font-weight: 600;
   color: #97daf7;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 16px;
+  }
 `;
 
 const StyledH4 = styled.h4`

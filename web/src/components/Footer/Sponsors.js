@@ -4,6 +4,10 @@ const Sponsors = styled.div`
   display: flex;
   align-items: center;
 
+  @media screen and (max-width: 768px) {
+    margin-top: 2rem;
+  }
+
   > a {
     margin-right: 2rem;
     transition: opacity 0.25s linear;
