@@ -35,6 +35,10 @@ function SEO({ description, lang, meta, keywords, title }) {
                 content: 'website'
               },
               {
+                property: 'og:image',
+                content: require('../assets/images/middlesbrough-front-end.png')
+              },
+              {
                 name: 'twitter:card',
                 content: 'summary'
               },
