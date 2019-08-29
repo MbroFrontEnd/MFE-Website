@@ -65,10 +65,15 @@ const Venue = () => (
       <StyledAside>
         <StyledH4>Hit The Bar, Middlesbrough</StyledH4>
         <Text>
-          We are joined by some good friends from another part of the country
-          who have taken the time to come along and speak to us about this
-          amazing static site architecture. Jamie absolutely loves it and he
-          doesn’t shut up about it and it does everybody’s head in.
+          Our meetup takes place in a small pub called Hit The Bar, situated
+          within Middlesbrough's Boho Zone off Bridge Street East near
+          Middlesbrough Train Station.
+        </Text>
+
+        <Text>
+          <a href="https://www.google.com/maps/place/Hit+The+Bar/@54.5796182,-1.2334034,15z/data=!4m2!3m1!1s0x0:0x6decf19a8daf8700?sa=X&ved=2ahUKEwjPgYXT16fkAhVynVwKHdVbDRQQ_BIwEnoECAwQCA">
+            Find Hit The Bar on Google Maps
+          </a>
         </Text>
         <StyledAddress>
           Hit The Bar, Bridge Street East, Middlesbrough
