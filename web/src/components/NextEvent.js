@@ -53,7 +53,7 @@ const NextEvent = () => {
           height="24"
           alt="Location"
         />
-        Hit The Bar, Middlesbrough
+        Boho One, Middlesbrough
       </StyledAddress>
 
       {event._rawIntroduction && (
