@@ -50,6 +50,11 @@ const StyledSvg = styled.img`
   margin-right: 1.5rem;
 `;
 
+const StyledLink = styled.a`
+  color: #fff;
+  text-decoration: underline;
+`;
+
 const Venue = () => (
   <Section>
     <StyledHeader>
@@ -70,9 +75,9 @@ const Venue = () => (
         </Text>
 
         <Text>
-          <a href="https://www.google.co.uk/maps/place/Boho+One/@54.57981,-1.237898,17z/data=!3m1!4b1!4m5!3m4!1s0x487eed12e84ab68d:0xd6351d5305732e91!8m2!3d54.57981!4d-1.235704">
+          <StyledLink href="https://www.google.co.uk/maps/place/Boho+One/@54.57981,-1.237898,17z/data=!3m1!4b1!4m5!3m4!1s0x487eed12e84ab68d:0xd6351d5305732e91!8m2!3d54.57981!4d-1.235704">
             Find Boho One on Google Maps
-          </a>
+          </StyledLink>
         </Text>
         <StyledAddress>
           Boho One, Bridge Street West, Middlesbrough
