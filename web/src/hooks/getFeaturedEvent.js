@@ -7,6 +7,7 @@ export const getFeaturedEvent = () => {
         sanityEvent(featuredEvent: { eq: true }) {
           id
           name
+          ticketLink
           eventDate(formatString: "MMMM Do YYYY")
           _rawIntroduction
           talks {
