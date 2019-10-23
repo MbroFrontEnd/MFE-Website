@@ -13,6 +13,11 @@ const Main = styled.main`
     text-decoration: underline;
     font-weight: 600;
   }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
 `;
 
 export default Main;

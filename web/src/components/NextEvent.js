@@ -4,7 +4,6 @@ import BlockContent from '@sanity/block-content-to-react';
 
 import { HeadingAlpha } from '../components/Headings';
 import { Event } from '../components/Event';
-import { Text } from '../components/Text';
 import { Section } from '../components/Section';
 
 import { getFeaturedEvent } from '../hooks/getFeaturedEvent';
