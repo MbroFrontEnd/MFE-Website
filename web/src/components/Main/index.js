@@ -8,12 +8,6 @@ const Main = styled.main`
     padding: 0 1rem;
   }
 
-  a {
-    color: ${props => props.theme.text.color};
-    text-decoration: underline;
-    font-weight: 600;
-  }
-
   p {
     font-size: 1.125rem;
     line-height: 1.5rem;

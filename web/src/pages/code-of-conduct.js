@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import BlockContent from '@sanity/block-content-to-react';
 import { graphql } from 'gatsby';
 
@@ -22,6 +23,14 @@ export const query = graphql`
   }
 `;
 
+const StyledMain = styled(Main)`
+  a {
+    color: ${props => props.theme.text.color};
+    font-weight: 600;
+    text-decoration: underline;
+  }
+`;
+
 export default ({ data }) => (
   <Layout>
     <SEO
@@ -30,8 +39,8 @@ export default ({ data }) => (
       keywords={data.site.keywords}
     />
 
-    <Main>
+    <StyledMain>
       <BlockContent blocks={data.content._rawBody} serializers={serializers} />
-    </Main>
+    </StyledMain>
   </Layout>
 );
