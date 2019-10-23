@@ -22,6 +22,11 @@ export default {
       }
     },
     {
+      name: 'ticketLink',
+      type: 'url',
+      title: 'Ticket Link'
+    },
+    {
       name: 'eventDate',
       title: 'Event Date',
       description: 'The date of the event',

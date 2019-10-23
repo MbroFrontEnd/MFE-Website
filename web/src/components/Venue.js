@@ -50,6 +50,11 @@ const StyledSvg = styled.img`
   margin-right: 1.5rem;
 `;
 
+const StyledLink = styled.a`
+  color: #fff;
+  text-decoration: underline;
+`;
+
 const Venue = () => (
   <Section>
     <StyledHeader>
@@ -63,20 +68,24 @@ const Venue = () => (
     </StyledHeader>
     <StyledDiv>
       <StyledAside>
-        <StyledH4>Hit The Bar, Middlesbrough</StyledH4>
+        <StyledH4>Boho One, Middlesbrough</StyledH4>
         <Text>
-          We are joined by some good friends from another part of the country
-          who have taken the time to come along and speak to us about this
-          amazing static site architecture. Jamie absolutely loves it and he
-          doesn’t shut up about it and it does everybody’s head in.
+          Our meetup takes place at Boho One, situated within Middlesbrough's
+          Boho Zone on Bridge Street West opposite Middlesbrough Train Station.
+        </Text>
+
+        <Text>
+          <StyledLink href="https://www.google.co.uk/maps/place/Boho+One/@54.57981,-1.237898,17z/data=!3m1!4b1!4m5!3m4!1s0x487eed12e84ab68d:0xd6351d5305732e91!8m2!3d54.57981!4d-1.235704">
+            Find Boho One on Google Maps
+          </StyledLink>
         </Text>
         <StyledAddress>
-          Hit The Bar, Bridge Street East, Middlesbrough
+          Boho One, Bridge Street West, Middlesbrough
         </StyledAddress>
       </StyledAside>
       <StyledImg
-        src={require('../assets/images/hit-the-bar.jpg')}
-        alt="Hit The Bar"
+        src={require('../assets/images/boho-one.jpg')}
+        alt="Boho One"
       />
     </StyledDiv>
   </Section>

@@ -9,6 +9,7 @@
     "format": "prettier-eslint --write \"**/*.js\" \"!node_modules/**\"",
     "build": "sanity build",
     "graphql-deploy": "sanity graphql deploy --playground",
+    "graphql-deploy:staging": "sanity graphql deploy --dataset staging --playground",
     "lint": "eslint .",
     "test": "sanity check"
   },
