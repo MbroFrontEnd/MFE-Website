@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledArticle = styled.article`
-  margin-bottom: 40px;
+  &:first-child {
+    margin-right: 20px;
+  }
 
   &:last-child {
-    margin-bottom: 0;
+    margin-left: 20px;
   }
 `;
 

@@ -4,8 +4,9 @@ import BlockContent from '@sanity/block-content-to-react';
 
 import { HeadingAlpha } from '../components/Headings';
 import { Event } from '../components/Event';
-import { Text } from '../components/Text';
 import { Section } from '../components/Section';
+import { ButtonLink } from '../components/Link';
+import { Text } from '../components/Text';
 
 import { getFeaturedEvent } from '../hooks/getFeaturedEvent';
 import serializers from '../serializers';
@@ -38,6 +39,22 @@ const LocationIcon = styled.img`
   margin-right: 1rem;
 `;
 
+const EventContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  ${Text} {
+    text-align: justify;
+  }
+`;
+
+const ButtonContainer = styled.div`
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+`;
+
 const NextEvent = () => {
   const event = getFeaturedEvent();
 
@@ -63,16 +80,24 @@ const NextEvent = () => {
         />
       )}
 
-      {event.talks.map(talk => (
-        <Event title={talk.title} speaker={talk.speaker.name} key={talk._key}>
-          {talk._rawSynopsis && (
-            <BlockContent
-              blocks={talk._rawSynopsis}
-              serializers={serializers}
-            />
-          )}
-        </Event>
-      ))}
+      <EventContainer>
+        {event.talks.map(talk => (
+          <Event title={talk.title} speaker={talk.speaker.name} key={talk._key}>
+            {talk._rawSynopsis && (
+              <BlockContent
+                blocks={talk._rawSynopsis}
+                serializers={serializers}
+              />
+            )}
+          </Event>
+        ))}
+      </EventContainer>
+
+      {event.ticketLink && (
+        <ButtonContainer>
+          <ButtonLink href={event.ticketLink}>Get Your Ticket</ButtonLink>
+        </ButtonContainer>
+      )}
     </Section>
   );
 };
