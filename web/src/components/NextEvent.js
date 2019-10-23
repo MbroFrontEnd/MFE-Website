@@ -95,7 +95,9 @@ const NextEvent = () => {
 
       {event.ticketLink && (
         <ButtonContainer>
-          <ButtonLink href={event.ticketLink}>Get Your Ticket</ButtonLink>
+          <ButtonLink href={event.ticketLink} target="_blank" rel="noreferrer">
+            Get Your Ticket
+          </ButtonLink>
         </ButtonContainer>
       )}
     </Section>
