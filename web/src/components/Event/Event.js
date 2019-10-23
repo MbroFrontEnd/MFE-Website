@@ -2,15 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const StyledArticle = styled.article`
-  &:first-child {
-    margin-right: 20px;
-  }
-
-  &:last-child {
-    margin-left: 20px;
-  }
-`;
+const StyledArticle = styled.article``;
 
 const StyledH4 = styled.h4`
   margin: 0 0 8px 0;
