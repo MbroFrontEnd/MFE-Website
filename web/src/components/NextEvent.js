@@ -57,6 +57,19 @@ const EventContainer = styled.div`
   ${Text} {
     text-align: justify;
   }
+
+  @media screen and (max-width: 425px) {
+    flex-direction: column;
+
+    article {
+      &:first-child {
+        margin-right: 0;
+      }
+      &:last-child {
+        margin-left: 0;
+      }
+    }
+  }
 `;
 
 const ButtonContainer = styled.div`
