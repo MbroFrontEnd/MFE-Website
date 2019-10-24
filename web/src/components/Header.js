@@ -38,11 +38,11 @@ const Header = ({ siteTitle }) => (
     <Nav>
       <NavItemLink to="/code-of-conduct">Code of Conduct</NavItemLink>
       <NavItem
-        href="https://spectrum.chat/middlesbrough-fe"
+        href="https://join.slack.com/t/middlesbroughfrontend/shared_invite/enQtODA3OTMyNTI4ODgwLWE5ZjQ0YjM4MzFmN2RkYTFhNjAzZTc2NjI2YmJmNDIwNjgxODdkZWVlMjJmZGJjZTNiMWI2NDhkNmIxYjYwNTE"
         target="_blank"
         rel="noreferrer"
       >
-        Spectrum
+        Slack
       </NavItem>
       <NavItem
         href="https://github.com/MbroFrontEnd"
