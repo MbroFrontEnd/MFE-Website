@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 import Nav from './Nav';
-import NavItem from './NavItem';
+import NavItem, { NavItemLink } from './NavItem';
 
 const StyledHeader = styled.header`
   margin: 0 auto 7rem auto;
@@ -26,14 +27,16 @@ const StyledHeader = styled.header`
 
 const Header = ({ siteTitle }) => (
   <StyledHeader>
-    <img
-      src={require('../assets/images/logo.svg')}
-      alt={siteTitle}
-      width="220"
-      height="60"
-    />
+    <Link to="/">
+      <img
+        src={require('../assets/images/logo.svg')}
+        alt={siteTitle}
+        width="220"
+        height="60"
+      />
+    </Link>
     <Nav>
-      <NavItem href="#">Code of Conduct</NavItem>
+      <NavItemLink to="/code-of-conduct">Code of Conduct</NavItemLink>
       <NavItem
         href="https://spectrum.chat/middlesbrough-fe"
         target="_blank"
