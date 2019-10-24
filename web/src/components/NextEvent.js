@@ -44,6 +44,16 @@ const EventContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
 
+  article {
+    &:first-child {
+      margin-right: 20px;
+    }
+
+    &:last-child {
+      margin-left: 20px;
+    }
+  }
+
   ${Text} {
     text-align: justify;
   }
