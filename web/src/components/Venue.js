@@ -71,7 +71,7 @@ const Venue = () => {
         <HeadingBravo marginBottom="0">Venue</HeadingBravo>
       </StyledHeader>
       {venues.map(venue => (
-        <StyledDiv>
+        <StyledDiv key={venue.node.id}>
           <StyledAside>
             <StyledH4>
               {venue.node.address.building}, {venue.node.address.town}
