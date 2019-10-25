@@ -93,7 +93,7 @@ const NextEvent = () => {
           height="24"
           alt="Location"
         />
-        Boho One, Middlesbrough
+        {event.venue.name}, {event.venue.address.town}
       </StyledAddress>
 
       {event._rawIntroduction && (

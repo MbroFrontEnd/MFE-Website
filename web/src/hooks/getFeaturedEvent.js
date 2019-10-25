@@ -18,6 +18,12 @@ export const getFeaturedEvent = () => {
               name
             }
           }
+          venue {
+            name
+            address {
+              town
+            }
+          }
         }
       }
     `
