@@ -44,8 +44,31 @@ const EventContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
 
+  article {
+    &:first-child {
+      margin-right: 20px;
+    }
+
+    &:last-child {
+      margin-left: 20px;
+    }
+  }
+
   ${Text} {
     text-align: justify;
+  }
+
+  @media screen and (max-width: 425px) {
+    flex-direction: column;
+
+    article {
+      &:first-child {
+        margin-right: 0;
+      }
+      &:last-child {
+        margin-left: 0;
+      }
+    }
   }
 `;
 

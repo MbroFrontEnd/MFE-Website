@@ -15,6 +15,10 @@ export default () =>
         .schemaType('event')
         .child(S.documentTypeList('event').title('Events')),
       S.listItem()
+        .title('Pages')
+        .schemaType('page')
+        .child(S.documentTypeList('page').title('Pages')),
+      S.listItem()
         .title('Posts')
         .schemaType('post')
         .child(S.documentTypeList('post').title('Posts')),

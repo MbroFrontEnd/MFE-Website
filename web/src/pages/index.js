@@ -1,23 +1,14 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import styled from 'styled-components';
 
 import GraphQLErrorList from '../components/graphql-error-list';
 import SEO from '../components/seo';
 import Layout from '../containers/layout';
 import NextEvent from '../components/NextEvent';
-import PreviousEvents from '../components/PreviousEvents';
+// import PreviousEvents from '../components/PreviousEvents';
 import Venue from '../components/Venue';
 import CallForSpeakers from '../components/CallForSpeakers';
-
-const StyledMain = styled.main`
-  margin: 0 auto 5rem auto;
-  max-width: 980px;
-
-  @media screen and (max-width: 1024px) {
-    padding: 0 1rem;
-  }
-`;
+import Main from '../components/Main';
 
 export const query = graphql`
   query IndexPageQuery {
@@ -55,12 +46,12 @@ const IndexPage = props => {
         description={site.description}
         keywords={site.keywords}
       />
-      <StyledMain>
+      <Main>
         <NextEvent />
-        <PreviousEvents />
+        {/* <PreviousEvents /> */}
         <Venue />
         <CallForSpeakers />
-      </StyledMain>
+      </Main>
     </Layout>
   );
 };
