@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { HeadingBravo } from '../components/Headings';
 import { Text } from '../components/Text';
 import { Section } from '../components/Section';
+import { getVenue } from '../hooks/getVenue';
 
 const StyledDiv = styled.div`
   display: flex;
@@ -55,40 +56,43 @@ const StyledLink = styled.a`
   text-decoration: underline;
 `;
 
-const Venue = () => (
-  <Section>
-    <StyledHeader>
-      <StyledSvg
-        src={require('../assets/icons/location.svg')}
-        alt="Location"
-        width="32"
-        height="32"
-      />
-      <HeadingBravo marginBottom="0">Venue</HeadingBravo>
-    </StyledHeader>
-    <StyledDiv>
-      <StyledAside>
-        <StyledH4>Boho One, Middlesbrough</StyledH4>
-        <Text>
-          Our meetup takes place at Boho One, situated within Middlesbrough's
-          Boho Zone on Bridge Street West opposite Middlesbrough Train Station.
-        </Text>
+const Venue = () => {
+  const venues = getVenue();
 
-        <Text>
-          <StyledLink href="https://www.google.co.uk/maps/place/Boho+One/@54.57981,-1.237898,17z/data=!3m1!4b1!4m5!3m4!1s0x487eed12e84ab68d:0xd6351d5305732e91!8m2!3d54.57981!4d-1.235704">
-            Find Boho One on Google Maps
-          </StyledLink>
-        </Text>
-        <StyledAddress>
-          Boho One, Bridge Street West, Middlesbrough
-        </StyledAddress>
-      </StyledAside>
-      <StyledImg
-        src={require('../assets/images/boho-one.jpg')}
-        alt="Boho One"
-      />
-    </StyledDiv>
-  </Section>
-);
+  return (
+    <Section>
+      <StyledHeader>
+        <StyledSvg
+          src={require('../assets/icons/location.svg')}
+          alt="Location"
+          width="32"
+          height="32"
+        />
+        <HeadingBravo marginBottom="0">Venue</HeadingBravo>
+      </StyledHeader>
+      {venues.map(venue => (
+        <StyledDiv>
+          <StyledAside>
+            <StyledH4>
+              {venue.node.address.building}, {venue.node.address.town}
+            </StyledH4>
+            <Text>{venue.node.description}</Text>
+
+            <Text>
+              <StyledLink href={venue.node.mapLink}>
+                Find {venue.node.name} on Google Maps
+              </StyledLink>
+            </Text>
+            <StyledAddress>
+              {venue.node.address.building}, {venue.node.address.street},{' '}
+              {venue.node.address.town}, {venue.node.address.postcode}
+            </StyledAddress>
+          </StyledAside>
+          <StyledImg src={venue.node.image.asset.url} alt={venue.node.name} />
+        </StyledDiv>
+      ))}
+    </Section>
+  );
+};
 
 export default Venue;
