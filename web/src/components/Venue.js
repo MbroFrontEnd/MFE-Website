@@ -17,6 +17,13 @@ const StyledDiv = styled.div`
   }
 `;
 
+const StyledImg = styled(Img)`
+  display: block;
+  max-width: 350px;
+  width: 100%;
+  height: 200px;
+`
+
 const StyledHeader = styled.header`
   margin-bottom: 2rem;
   display: flex;
@@ -85,7 +92,7 @@ const Venue = () => {
               {venue.node.address.town}, {venue.node.address.postcode}
             </StyledAddress>
           </StyledAside>
-          <Img fixed={venue.node.image.asset.fluid} alt={venue.node.name} />
+          <StyledImg fixed={venue.node.image.asset.fluid} alt={venue.node.name} />
         </StyledDiv>
       ))}
     </Section>
