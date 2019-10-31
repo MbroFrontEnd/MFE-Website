@@ -19,7 +19,9 @@ export const getVenue = () => {
               }
               image {
                 asset {
-                  url
+                  fluid(maxWidth: 375) {
+                    ...GatsbySanityImageFluid
+                  }
                 }
               }
             }

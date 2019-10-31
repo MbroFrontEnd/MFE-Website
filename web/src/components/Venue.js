@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 
 import { HeadingBravo } from '../components/Headings';
 import { Text } from '../components/Text';
@@ -43,10 +44,6 @@ const StyledH4 = styled.h4`
   color: #FFFFFF:
 `;
 
-const StyledImg = styled.img`
-  max-width: 375px;
-`;
-
 const StyledSvg = styled.img`
   margin-right: 1.5rem;
 `;
@@ -88,7 +85,7 @@ const Venue = () => {
               {venue.node.address.town}, {venue.node.address.postcode}
             </StyledAddress>
           </StyledAside>
-          <StyledImg src={venue.node.image.asset.url} alt={venue.node.name} />
+          <Img fixed={venue.node.image.asset.fluid} alt={venue.node.name} />
         </StyledDiv>
       ))}
     </Section>
