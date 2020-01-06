@@ -12,6 +12,7 @@ import person from './documents/person'
 import post from './documents/post'
 import siteSettings from './documents/siteSettings'
 import talk from './documents/talk'
+import venue from './documents/venue'
 
 // Object types
 import bioPortableText from './objects/bioPortableText'
@@ -20,6 +21,7 @@ import seo from './objects/seo'
 import twitter from './objects/twitter'
 import advancedPortableText from './objects/advancedPortableText'
 import simplePortableText from './objects/simplePortableText'
+import address from './objects/address'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -37,6 +39,7 @@ export default createSchema({
     advancedPortableText,
     simplePortableText,
     talk,
+    address,
     // The following are document types which will appear
     // in the studio.
     category,
@@ -44,6 +47,7 @@ export default createSchema({
     page,
     person,
     post,
-    siteSettings
+    siteSettings,
+    venue
   ])
 })

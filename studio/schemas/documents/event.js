@@ -63,6 +63,12 @@ export default {
       name: 'talks',
       type: 'array',
       of: [{ type: 'talk' }]
+    },
+    {
+      title: 'Venue',
+      name: 'venue',
+      type: 'reference',
+      to: [{ type: 'venue' }]
     }
   ],
   preview: {
