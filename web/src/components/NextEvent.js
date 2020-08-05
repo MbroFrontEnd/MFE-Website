@@ -83,45 +83,59 @@ const NextEvent = () => {
 
   return (
     <Section>
-      <StyledTime>{event.eventDate}</StyledTime>
-      <HeadingAlpha>{event.name}</HeadingAlpha>
+      {event ? (
+        <>
+          <StyledTime>{event.eventDate}</StyledTime>
+          <HeadingAlpha>{event.name}</HeadingAlpha>
 
-      <StyledAddress>
-        <LocationIcon
-          src={require('../assets/icons/location.svg')}
-          width="24"
-          height="24"
-          alt="Location"
-        />
-        {event.venue.name}, {event.venue.address.town}
-      </StyledAddress>
+          <StyledAddress>
+            <LocationIcon
+              src={require('../assets/icons/location.svg')}
+              width="24"
+              height="24"
+              alt="Location"
+            />
+            {event.venue.name}, {event.venue.address.town}
+          </StyledAddress>
 
-      {event._rawIntroduction && (
-        <BlockContent
-          blocks={event._rawIntroduction}
-          serializers={serializers}
-        />
-      )}
+          {event._rawIntroduction && (
+            <BlockContent
+              blocks={event._rawIntroduction}
+              serializers={serializers}
+            />
+          )}
 
-      <EventContainer>
-        {event.talks.map(talk => (
-          <Event title={talk.title} speaker={talk.speaker.name} key={talk._key}>
-            {talk._rawSynopsis && (
-              <BlockContent
-                blocks={talk._rawSynopsis}
-                serializers={serializers}
-              />
-            )}
-          </Event>
-        ))}
-      </EventContainer>
+          <EventContainer>
+            {event.talks.map(talk => (
+              <Event
+                title={talk.title}
+                speaker={talk.speaker.name}
+                key={talk._key}
+              >
+                {talk._rawSynopsis && (
+                  <BlockContent
+                    blocks={talk._rawSynopsis}
+                    serializers={serializers}
+                  />
+                )}
+              </Event>
+            ))}
+          </EventContainer>
 
-      {event.ticketLink && (
-        <ButtonContainer>
-          <ButtonLink href={event.ticketLink} target="_blank" rel="noreferrer">
-            Get Your Ticket
-          </ButtonLink>
-        </ButtonContainer>
+          {event.ticketLink && (
+            <ButtonContainer>
+              <ButtonLink
+                href={event.ticketLink}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Get Your Ticket
+              </ButtonLink>
+            </ButtonContainer>
+          )}
+        </>
+      ) : (
+        <HeadingAlpha>We're taking a break right now, back soon!</HeadingAlpha>
       )}
     </Section>
   );
